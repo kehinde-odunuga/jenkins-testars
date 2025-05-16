@@ -1,0 +1,9 @@
+name: Dev env workflow
+on: [ push ]
+jobs:
+    Test:
+        runs-on: ubuntu-latest
+        steps: 
+            - uses: actions/checkout@v3
+            - run: echo "The job was automatically triggered by a a ${{ github.event_name }} event."
+            - run: python demo.py
